@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myfunc() {
+        var fname = document.getElementById("name").value;
+        document.getElementById("name1").value = fname;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Displaying Name:</h1>
+    <form>
+      <label>Enter your Name:</label>
+      <input type="text" id="name" /><br /><br />
+
+      <label>displaying your Name:</label>
+      <input type="text" id="name1" /><br /><br />
+      <input type="button" value="click here" onclick="myfunc()" />
+    </form>
+  </body>
+</html>

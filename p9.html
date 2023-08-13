@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function func() {
+        const totalnumber = 300;
+        var n1 = document.getElementById("num1").value;
+        var n2 = document.getElementById("num2").value;
+        var n3 = document.getElementById("num3").value;
+        var total = parseInt(n1) + parseInt(n2) + parseInt(n3);
+        document.getElementById("score").value = total;
+        var percentage = (total / totalnumber) * 100;
+        document.getElementById("percent").value = percentage;
+        document.getElementById("grade").value = Grading(percentage);
+      }
+      function Grading(per) {
+        var g;
+        if (per >= 80 && per <= 100) {
+          g = "Excellent";
+        } else if (per < 35) {
+          g = "Fail and Poor";
+        } else if (per >= 35 && per <= 50) {
+          g = "Pass";
+        } else if (per > 50 && per <= 70) {
+          g = "Good";
+        }
+        return g;
+      }
+    </script>
+    <style>
+      h1 {
+        color: white;
+      }
+      #div1 {
+        border: px solid gray;
+        background-image: url(Images/report.jpg);
+        color: white;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+      }
+      input:hover {
+        background-color: lightgoldenrodyellow;
+        color: blue;
+        font-size: larger;
+      }
+      #btn {
+        background-color: blue;
+        color: white;
+        height: 30px;
+        border-radius: 20px;
+      }
+      #btn:hover {
+        color: white;
+        background-color: lightseagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <h1>Marks Card:</h1>
+      <form>
+        <label>Enter Marks m1:</label>
+        <input type="number" id="num1" /><br /><br />
+        <label>Enter Marks m2:</label>
+        <input type="number" id="num2" /><br /><br />
+        <label>Enter Marks m3:</label>
+        <input type="number" id="num3" /><br /><br />
+        <label>Total Score:</label>
+        <input id="score" /><br /><br />
+        <label>Percentage:</label>
+        <input id="percent" /><br /><br />
+        <label>Grade:</label>
+        <input id="grade" /><br /><br />
+        <input type="button" value="Get Score" id="btn" onclick="func()" />
+      </form>
+    </div>
+  </body>
+</html>

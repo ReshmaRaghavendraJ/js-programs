@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var a = 100;
+      var b = 225;
+      function add() {
+        let add = a + b;
+        // window.alert(add);
+        document.write(add);
+        //  document.getElementById("addition").innerHTML = add;
+        //  console.log(add);
+      }
+    </script>
+    <style>
+      h1 {
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Addition of two numbers:</h1>
+    <h1 id="addition"></h1>
+    <form><input type="button" onclick="add()" value="Add" /></form>
+  </body>
+</html>

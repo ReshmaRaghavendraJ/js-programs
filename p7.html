@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function func()
+    {
+        var p=document.getElementById("pwd").value;
+        var e=document.getElementById("mail").value;
+        document.getElementById("pid").innerHTML="";
+        var atpos=e.indexOf('@');
+        var dotpos=e.indexOf('.');
+    if(e=="" && p=="")
+    {  
+        document.getElementById("pid").innerHTML="Please enter your email id and password";
+        return 0;
+    }
+     if(atpos<1 || dotpos<atpos+2)
+    {
+    document.getElementById("pid").innerHTML="please enter valid email id using \'@\' and \'.\'";
+    return 0;
+    }
+    if(p=="")
+    {
+        document.getElementById("pid").innerHTML="Enter your password";
+        return 0;
+    }
+    if(p.length<=5)
+    {
+    document.getElementById("pid").innerHTML="Password should contain minimum of 6 characters";
+    return 0;
+    }
+    if(p.length>15)
+    {
+    document.getElementById("pid").innerHTML="Password is exceeding above 15 characters";
+    return 0;
+    }
+}
+   
+
+    function clr()
+    {
+        
+        document.getElementById("mail").value="";
+        document.getElementById("pwd").value="";
+        document.getElementById("pid").innerHTML="";
+    }
+    </script>
+</head>
+<body>
+<form>
+        <input type="email" placeholder="Enter your email" id="mail"><br><br>
+        <input type="password" placeholder="Enter your Password" id="pwd" onclick="func()"><br><br>
+    <input type="button" value="Submit" onclick="func()">
+    <input type="button" value="Reset" id="reset" onclick="clr()">
+    <p id="pid"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myscore() {
+        var m1 = document.getElementById("txtM1").value;
+        var m2 = document.getElementById("txtM2").value;
+        var m3 = document.getElementById("txtM3").value;
+        var sum = parseInt(m1) + parseInt(m2) + parseInt(m3);
+        document.getElementById("txtTS").value = sum;
+        var Avg = sum / 3;
+        document.getElementById("txtPer").value = Avg;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label>Enter Marks M1</label>
+        <input type="number" id="txtM1" />
+      </div>
+      <div>
+        <label>Enter Marks M2</label>
+        <input type="number" id="txtM2" />
+      </div>
+      <div>
+        <label>Enter Marks M3</label>
+        <input type="number" id="txtM3" />
+      </div>
+      <div>
+        <label>Total Score</label>
+        <input type="text" id="txtTS" />
+      </div>
+      <div>
+        <label>Percentage</label>
+        <input type="text" id="txtPer" />
+      </div>
+      <div>
+        <input type="button" value="Get Score" onclick="myscore()" />
+      </div>
+    </form>
+  </body>
+</html>
